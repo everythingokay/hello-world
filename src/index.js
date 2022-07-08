@@ -1,7 +1,10 @@
-import fruits from './fruits';
-import { choice, remove } from './foods';
+import fruits from './foods';
+import { choice, remove } from './helpers';
 
-sort(fruits);
+let food = choice(fruits);
+console.log(`I'd like one ${food}, please.`);
+console.log(`Here you go: ${food}.`);
+console.log(`Delicious!  May I have another?`);
 
-choice;
-remove;
+let remaining = remove(fruits, food);
+console.log(`I'm sorry, we're all out.  We have ${remaining.length} other foods left.`);
